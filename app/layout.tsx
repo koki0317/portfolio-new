@@ -1,9 +1,6 @@
-import TopLeftImg from "@/components/TopLeftImg";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import Nav from "@/components/Nav";
-import Header from "@/components/Header";
 
 const poppins = Poppins({
   subsets: ["latin"],
