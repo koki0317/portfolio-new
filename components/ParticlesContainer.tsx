@@ -5,7 +5,7 @@ import { loadFull } from "tsparticles";
 interface ParticlesContainerProps {}
 
 const ParticlesContainer: FC<ParticlesContainerProps> = ({}) => {
-  const particlesInit = useCallback(async (engine) => {
+  const particlesInit = useCallback(async (engine: any) => {
     await loadFull(engine);
   }, []);
 
