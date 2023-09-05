@@ -23,9 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className} suppressHydrationWarning={true}>
-        <div className="relative w-full h-screen overflow-hidden text-white bg-cover bg-no-repeat">
-          {children}
-        </div>
+        <div className="relative overflow-hidden text-white">{children}</div>
       </body>
     </html>
   );
