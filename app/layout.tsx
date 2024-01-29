@@ -5,6 +5,8 @@ import StarsCanvas from "@/components/StarBackground";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Poppins } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import { useTheme } from "next-themes";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -21,15 +23,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // const client = useClient()
+  // const { themes } = useTheme();
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
+        className={`${inter.className} dark:bg-[#030014] overflow-y-scroll overflow-x-hidden`}
       >
-        {/* <StarsCanvas /> */}
-        <Navbar />
-        {children}
-        {/* <Footer /> */}
+        <ThemeProvider
+          attribute="class"
+          themes={["light", "dark"]}
+          defaultTheme="light"
+          enableSystem
+        >
+          <Navbar />
+          {children}
+          {/* <Footer /> */}
+        </ThemeProvider>
       </body>
     </html>
   );
