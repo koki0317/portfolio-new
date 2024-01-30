@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import StarsCanvas from "@/components/StarBackground";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { Poppins } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import { useTheme } from "next-themes";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -38,7 +36,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
-          {/* <Footer /> */}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

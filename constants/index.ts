@@ -24,7 +24,7 @@ export const Skill_data = [
   },
   {
     src: Css,
-    alt: "HTML Logo",
+    alt: "CSS Logo",
   },
   {
     src: Javascript,

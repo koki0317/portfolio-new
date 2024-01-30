@@ -9,6 +9,7 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import AboutMe from "@/components/AboutMe";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   const { theme, themes } = useTheme();
@@ -28,6 +29,7 @@ export default function Home() {
         <AboutMe />
         <Skills />
         <Projects />
+        <Contact />
       </div>
     </main>
   );
