@@ -27,9 +27,7 @@ export default function Home() {
         <Hero />
         <AboutMe />
         <Skills />
-        {/* <Skills />
-        <Encryption />
-        <Projects /> */}
+        <Projects />
       </div>
     </main>
   );

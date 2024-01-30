@@ -74,10 +74,10 @@ export const Skill_data = [
     src: Figma,
     alt: "Figma Logo",
   },
-  {
-    src: Linux,
-    alt: "Linux Logo",
-  },
+  // {
+  //   src: Linux,
+  //   alt: "Linux Logo",
+  // },
   {
     src: Ubuntu,
     alt: "Ubuntu Logo",
