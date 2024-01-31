@@ -65,7 +65,11 @@ const Contact = () => {
                   <FormItem>
                     <FormLabel>Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="name" {...field} />
+                      <Input
+                        placeholder="name"
+                        {...field}
+                        className="bg-gray-100"
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -78,7 +82,11 @@ const Contact = () => {
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="email@google.com" {...field} />
+                      <Input
+                        placeholder="email@google.com"
+                        {...field}
+                        className="bg-gray-100"
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -91,7 +99,12 @@ const Contact = () => {
                   <FormItem>
                     <FormLabel>Message</FormLabel>
                     <FormControl>
-                      <Textarea rows={5} placeholder="Message" {...field} />
+                      <Textarea
+                        rows={5}
+                        placeholder="Message"
+                        {...field}
+                        className="bg-gray-100"
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
