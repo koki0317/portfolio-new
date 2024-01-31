@@ -7,6 +7,10 @@
   font-family: "Cedarville Cursive", cursive;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

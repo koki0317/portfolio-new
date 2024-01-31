@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="relative flex flex-col h-full w-full">
+    <section id="hero" className="relative flex flex-col h-full w-full">
       <motion.div
         initial="hidden"
         animate="visible"
@@ -37,7 +37,7 @@ const Hero = () => {
           </div>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

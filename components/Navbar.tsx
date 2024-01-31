@@ -1,9 +1,9 @@
-import { Socials } from "@/constants";
 import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import { MobileSidebar } from "./MobileSidebar";
 import { ModeToggle } from "./ModeToggle";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -14,11 +14,23 @@ const Navbar = () => {
         </span>
         <div className="flex gap-5">
           <ModeToggle />
-          <div className="dark:text-gray-100 text-gray-900 font-semibold hidden gap-8 items-center lg:flex">
-            <div>About Me</div>
-            <div>Skills</div>
-            <div>Projects</div>
-            <Button variant="secondary">Contact</Button>
+          <div className="dark:text-gray-100 text-gray-900 font-semibold">
+            <ul className="hidden gap-8 items-center lg:flex">
+              <li>
+                <Link href="#about-me">About Me</Link>
+              </li>
+              <li>
+                <Link href="#skills">Skills</Link>
+              </li>
+              <li>
+                <Link href="#projects">Projects</Link>
+              </li>
+              <li>
+                <Link href="#contact">
+                  <Button variant="secondary">Contact</Button>
+                </Link>
+              </li>
+            </ul>
           </div>
           <MobileSidebar />
         </div>

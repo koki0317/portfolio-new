@@ -11,7 +11,7 @@ import { Card, CardContent } from "./ui/card";
 
 const Projects = () => {
   return (
-    <section className="px-4 lg:px-6 py-20">
+    <section id="projects" className="px-4 lg:px-6 py-20">
       <div className="flex flex-col items-center">
         <h2 className="title-text text-center mb-4">Projects</h2>
         <Carousel className="w-full max-w-[250px]">

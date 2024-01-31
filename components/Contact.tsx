@@ -52,7 +52,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="px-4 lg:px-6 py-20 max-w-sm mx-auto">
+    <section id="contact" className="px-4 lg:px-6 py-20 max-w-sm mx-auto">
       <div>
         <h2 className="title-text text-center mb-4">Contact</h2>
         <Form {...form}>

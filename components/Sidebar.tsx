@@ -8,6 +8,7 @@ import {
   NotebookTabs,
   Presentation,
 } from "lucide-react";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
 export const Sidebar = () => {
@@ -17,27 +18,27 @@ export const Sidebar = () => {
   const routes = [
     {
       icon: Home,
-      href: "/",
+      href: "#hero",
       label: "home",
     },
     {
       icon: CircleUserRound,
-      href: "/companion/new",
+      href: "#about-me",
       label: "About Me",
     },
     {
       icon: Hammer,
-      href: "/settings",
+      href: "#skills",
       label: "Skills",
     },
     {
       icon: Presentation,
-      href: "/settings",
+      href: "#projects",
       label: "Projects",
     },
     {
       icon: NotebookTabs,
-      href: "/settings",
+      href: "#contact",
       label: "Contact",
     },
   ];
@@ -54,15 +55,17 @@ export const Sidebar = () => {
             <div
               onClick={() => onNavigate(route.href)}
               key={route.href}
-              className={cn(
-                "text-muted-foreground text-xs group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-primary hover:bg-primary/10 rounded-lg transition",
-                pathname === route.href && "bg-primary/10 text-primary"
-              )}
+              className={
+                "text-muted-foreground text-xs group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-primary hover:bg-primary/10 rounded-lg transition"
+              }
             >
-              <div className="flex flex-col gap-y-2 items-center flex-1">
+              <Link
+                href={route.href}
+                className="flex flex-col gap-y-2 items-center flex-1"
+              >
                 <route.icon className="h-5 w-5" />
                 {route.label}
-              </div>
+              </Link>
             </div>
           ))}
         </div>
