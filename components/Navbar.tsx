@@ -14,7 +14,7 @@ const Navbar = () => {
         </span>
         <div className="flex gap-3 lg:gap-5">
           <ModeToggle />
-          <div className="dark:text-gray-100 text-gray-900 font-semibold">
+          <div className="dark:text-gray-100 text-gray-900 text-sm">
             <ul className="hidden gap-8 items-center lg:flex">
               <li>
                 <Link href="#about-me">About Me</Link>

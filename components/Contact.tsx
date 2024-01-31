@@ -51,6 +51,8 @@ const Contact = () => {
     }
   };
 
+  const isLoading = form.formState.isSubmitting;
+
   return (
     <section id="contact" className="px-4 lg:px-6 py-20 max-w-sm mx-auto">
       <div>
@@ -111,7 +113,9 @@ const Contact = () => {
                 )}
               />
             </div>
-            <Button type="submit">Submit</Button>
+            <Button type="submit" disabled={isLoading}>
+              Submit
+            </Button>
           </form>
         </Form>
       </div>
