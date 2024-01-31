@@ -4,7 +4,7 @@ import StarsCanvas from "@/components/StarBackground";
 import Navbar from "@/components/Navbar";
 import { Poppins } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "react-hot-toast";
 
 const inter = Poppins({
   subsets: ["latin"],

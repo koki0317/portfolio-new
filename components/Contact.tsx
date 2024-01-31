@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -18,6 +18,8 @@ import { Button } from "./ui/button";
 import { Textarea } from "./ui/textarea";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast";
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -30,8 +32,6 @@ const formSchema = z.object({
 });
 
 const Contact = () => {
-  const router = useRouter();
-
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -41,14 +41,14 @@ const Contact = () => {
     },
   });
 
-  const { toast } = useToast();
-
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
-    toast({
-      description: "The form was successfully sent.",
-    });
-    form.reset();
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      await axios.post("/api/email", values);
+      toast.success("Submission successful.");
+      form.reset();
+    } catch (error) {
+      toast.error("An error occurred. ");
+    }
   };
 
   return (
