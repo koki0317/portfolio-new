@@ -12,7 +12,7 @@ const Navbar = () => {
         <span className="cursive font-bold text-xl lg:text-2xl text-gray-900 dark:text-gray-300">
           Koki Takahashi
         </span>
-        <div className="flex gap-5">
+        <div className="flex gap-3 lg:gap-5">
           <ModeToggle />
           <div className="dark:text-gray-100 text-gray-900 font-semibold">
             <ul className="hidden gap-8 items-center lg:flex">
