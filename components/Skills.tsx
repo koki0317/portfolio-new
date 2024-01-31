@@ -1,12 +1,20 @@
 "use client";
 
 import { Skill_data } from "@/constants";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { useTheme } from "next-themes";
 
 const Skills = () => {
   const { theme } = useTheme();
+
+  const [isDark, setIsDark] = useState<boolean>();
+  useEffect(() => {
+    if (theme == "dark") {
+      return setIsDark(true);
+    }
+    return setIsDark(false);
+  }, [theme]);
 
   return (
     <section id="skills" className="px-4 lg:px-6 py-20">
@@ -18,7 +26,7 @@ const Skills = () => {
               width={32}
               height={32}
               key={skill.alt}
-              fill={theme === "dark" ? "white" : "black"}
+              fill={isDark ? "white" : "black"}
             />
           ))}
         </div>

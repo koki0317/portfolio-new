@@ -12,7 +12,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
 export const Sidebar = () => {
-  const pathname = usePathname();
+  // const pathname = usePathname();
   const router = useRouter();
 
   const routes = [

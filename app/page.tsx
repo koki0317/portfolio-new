@@ -12,7 +12,7 @@ import AboutMe from "@/components/AboutMe";
 import Contact from "@/components/Contact";
 
 export default function Home() {
-  const { theme, themes } = useTheme();
+  const { theme } = useTheme();
 
   const [isDark, setIsDark] = useState<boolean>();
   useEffect(() => {
