@@ -13,8 +13,8 @@ const inter = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Space Portfolio",
-  description: "This is my portfolio",
+  title: "Koki Takahashi",
+  description: "This is my portfolio.",
 };
 
 export default function RootLayout({
