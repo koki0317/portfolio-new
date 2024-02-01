@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { Link as Scroll } from "react-scroll";
 
 export const Sidebar = () => {
   // const pathname = usePathname();
@@ -18,27 +19,27 @@ export const Sidebar = () => {
   const routes = [
     {
       icon: Home,
-      href: "#hero",
+      href: "hero",
       label: "home",
     },
     {
       icon: CircleUserRound,
-      href: "#about-me",
+      href: "about-me",
       label: "About Me",
     },
     {
       icon: Hammer,
-      href: "#skills",
+      href: "skills",
       label: "Skills",
     },
     {
       icon: Presentation,
-      href: "#projects",
+      href: "projects",
       label: "Projects",
     },
     {
       icon: NotebookTabs,
-      href: "#contact",
+      href: "contact",
       label: "Contact",
     },
   ];
@@ -59,13 +60,14 @@ export const Sidebar = () => {
                 "text-muted-foreground text-xs group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-primary hover:bg-primary/10 rounded-lg transition"
               }
             >
-              <Link
-                href={route.href}
+              <Scroll
+                to={route.href}
+                smooth
                 className="flex flex-col gap-y-2 items-center flex-1"
               >
                 <route.icon className="h-5 w-5" />
                 {route.label}
-              </Link>
+              </Scroll>
             </div>
           ))}
         </div>

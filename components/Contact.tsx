@@ -17,7 +17,6 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Textarea } from "./ui/textarea";
 import { useRouter } from "next/navigation";
-import { useToast } from "@/components/ui/use-toast";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -54,9 +53,9 @@ const Contact = () => {
   const isLoading = form.formState.isSubmitting;
 
   return (
-    <section id="contact" className="px-4 lg:px-6 py-20 max-w-sm mx-auto">
+    <section id="contact" className="px-4 lg:px-6 py-16 max-w-sm mx-auto">
       <div>
-        <h2 className="title-text text-center mb-4">Contact</h2>
+        <h2 className="title-text text-center mb-5 lg:mb-8">Contact</h2>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <div className="grid grid-cols-1 gap-5 mb-5">
@@ -64,7 +63,7 @@ const Contact = () => {
                 control={form.control}
                 name="name"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="relative">
                     <FormLabel>Name</FormLabel>
                     <FormControl>
                       <Input

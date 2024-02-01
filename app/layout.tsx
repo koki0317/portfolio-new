@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import { Poppins } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "react-hot-toast";
+import Footer from "@/components/Footer";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <Footer />
           <Toaster />
         </ThemeProvider>
       </body>

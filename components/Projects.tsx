@@ -7,26 +7,56 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
-import { Card, CardContent } from "./ui/card";
+import { Card, CardContent, CardFooter } from "./ui/card";
+import Image from "next/image";
+import Link from "next/link";
 
 const Projects = () => {
+  const projects = [
+    {
+      src: "/project1.png",
+      alt: "The SAAS website's screenshot",
+      text: "Built the SAAS website from design to functionality.",
+      slug: "https://www.air360.io/en/",
+    },
+    {
+      src: "/project2.webp",
+      alt: "The technical document's screenshot",
+      text: "Created a fully functional technical document.",
+      slug: "https://help.air360.io/",
+    },
+  ];
   return (
-    <section id="projects" className="px-4 lg:px-6 py-20">
+    <section id="projects" className="px-4 lg:px-6 py-16">
       <div className="flex flex-col items-center">
-        <h2 className="title-text text-center mb-4">Projects</h2>
-        <Carousel className="w-full max-w-[250px]">
+        <h2 className="title-text text-center mb-5 lg:mb-8">Projects</h2>
+        <Carousel className="w-full max-w-[250px] md:max-w-sm lg:max-w-md">
           <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
+            {projects.map((project, index) => (
               <CarouselItem key={index}>
-                <div className="p-5">
-                  <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                      <span className="text-4xl font-semibold">
-                        {index + 1}
-                      </span>
-                    </CardContent>
-                  </Card>
-                </div>
+                <Link href={project.slug}>
+                  <div className="">
+                    <Card className="hover:opacity-75 transition">
+                      <CardContent className="flex items-center justify-center">
+                        <Image
+                          loading="lazy"
+                          src={project.src}
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          alt={project.alt}
+                          style={{ width: "100%", height: "auto" }}
+                          className="rounded-t-lg object-cover"
+                        />
+                      </CardContent>
+                      <CardFooter>
+                        <p className="text-sm lg:text-base text-gray-500 mt-4 dark:text-gray-300">
+                          {project.text}
+                        </p>
+                      </CardFooter>
+                    </Card>
+                  </div>
+                </Link>
               </CarouselItem>
             ))}
           </CarouselContent>
