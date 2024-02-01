@@ -44,17 +44,12 @@ export const Sidebar = () => {
     },
   ];
 
-  const onNavigate = (url: string) => {
-    return router.push(url);
-  };
-
   return (
     <div className="space-y-4 flex flex-col h-full text-primary bg-secondary">
       <div className="p-3 flex flex-1 justify-center">
         <div className="space-y-2">
           {routes.map((route) => (
             <div
-              onClick={() => onNavigate(route.href)}
               key={route.href}
               className={
                 "text-muted-foreground text-xs group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-primary hover:bg-primary/10 rounded-lg transition"

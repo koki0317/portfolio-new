@@ -16,6 +16,7 @@ import Linux from "@/public/skills/linux.svg";
 import Ubuntu from "@/public/skills/ubuntu.svg";
 import Slack from "@/public/skills/slack.svg";
 import Trello from "@/public/skills/trello.svg";
+import Canva from "@/public/skills/canva.svg";
 
 export const Skill_data = [
   {
@@ -73,6 +74,10 @@ export const Skill_data = [
   {
     src: Figma,
     alt: "Figma Logo",
+  },
+  {
+    src: Canva,
+    alt: "Canva Logo",
   },
   // {
   //   src: Linux,
