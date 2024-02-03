@@ -19,6 +19,7 @@ import { Textarea } from "./ui/textarea";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import { useTheme } from "next-themes";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -52,9 +53,14 @@ const Contact = () => {
 
   const isLoading = form.formState.isSubmitting;
 
+  const { theme } = useTheme();
+  console.log(theme);
   return (
-    <section id="contact" className="px-4 lg:px-6 py-16 max-w-sm mx-auto">
-      <div>
+    <section
+      id="contact"
+      className="relative overflow-hidden px-4 lg:px-6 py-16 max-w-sm mx-auto"
+    >
+      <div className="">
         <h2 className="title-text text-center mb-5 lg:mb-8">Contact</h2>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -118,6 +124,19 @@ const Contact = () => {
           </form>
         </Form>
       </div>
+      {theme === "dark" && (
+        <div className="z-[-10] -right-5 bottom-2 opacity-50 absolute">
+          <video
+            className=""
+            preload="false"
+            playsInline
+            loop
+            muted
+            autoPlay
+            src="/space-decoration.webm"
+          />
+        </div>
+      )}
     </section>
   );
 };
