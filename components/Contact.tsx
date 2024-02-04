@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -54,90 +54,98 @@ const Contact = () => {
   const isLoading = form.formState.isSubmitting;
 
   const { theme } = useTheme();
-  console.log(theme);
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
-    <section
-      id="contact"
-      className="relative overflow-hidden px-4 lg:px-6 py-16 max-w-sm mx-auto"
-    >
-      <div className="">
-        <h2 className="title-text text-center mb-5 lg:mb-8">Contact</h2>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)}>
-            <div className="grid grid-cols-1 gap-5 mb-5">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem className="relative">
-                    <FormLabel>Name</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="name"
-                        {...field}
-                        className="bg-gray-100"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Email</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="email@google.com"
-                        {...field}
-                        className="bg-gray-100"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Message</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        rows={5}
-                        placeholder="Message"
-                        {...field}
-                        className="bg-gray-100"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-            <Button type="submit" disabled={isLoading}>
-              Submit
-            </Button>
-          </form>
-        </Form>
-      </div>
-      {theme === "dark" && (
-        <div className="z-[-10] -right-5 bottom-2 opacity-50 absolute">
-          <video
-            className=""
-            preload="false"
-            playsInline
-            loop
-            muted
-            autoPlay
-            src="/space-decoration.webm"
-          />
+    mounted && (
+      <section
+        id="contact"
+        className="relative overflow-hidden px-4 lg:px-6 py-16 max-w-sm mx-auto"
+      >
+        <div className="">
+          <h2 className="title-text text-center mb-5 lg:mb-8">Contact</h2>
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)}>
+              <div className="grid grid-cols-1 gap-5 mb-5">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem className="relative">
+                      <FormLabel>Name</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="name"
+                          {...field}
+                          className="bg-gray-100"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="email@google.com"
+                          {...field}
+                          className="bg-gray-100"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Message</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          rows={5}
+                          placeholder="Message"
+                          {...field}
+                          className="bg-gray-100"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <Button type="submit" disabled={isLoading}>
+                Submit
+              </Button>
+            </form>
+          </Form>
         </div>
-      )}
-    </section>
+        {theme === "dark" && (
+          <div className="z-[-10] -right-5 bottom-2 opacity-50 absolute">
+            <video
+              className=""
+              preload="false"
+              playsInline
+              loop
+              muted
+              autoPlay
+              src="/space-decoration.webm"
+            />
+          </div>
+        )}
+      </section>
+    )
   );
 };
 

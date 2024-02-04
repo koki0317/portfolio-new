@@ -30,7 +30,7 @@ const Skills = () => {
   const animationDelay = 0.2;
 
   return (
-    <section id="skills" className="px-4 lg:px-6 py-16">
+    <section id="skills" className="relative px-4 lg:px-6 py-16">
       <div className="">
         <h2 className="title-text text-center mb-5 lg:mb-8">Skills</h2>
         <div
