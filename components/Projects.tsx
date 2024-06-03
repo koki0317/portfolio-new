@@ -20,7 +20,13 @@ const Projects = () => {
       slug: "https://www.air360.io/en/",
     },
     {
-      src: "/project2.webp",
+      src: "/project2.png",
+      alt: "The lp's screenshot",
+      text: "EC site.",
+      slug: "https://ml-test.air360.io/",
+    },
+    {
+      src: "/project3.webp",
       alt: "The technical document's screenshot",
       text: "Created a fully functional technical document.",
       slug: "https://help.air360.io/",
