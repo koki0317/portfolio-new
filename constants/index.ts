@@ -17,6 +17,9 @@ import Ubuntu from "@/public/skills/ubuntu.svg";
 import Slack from "@/public/skills/slack.svg";
 import Trello from "@/public/skills/trello.svg";
 import Canva from "@/public/skills/canva.svg";
+import Playwright from "@/public/skills/playwright.svg";
+import Supabase from "@/public/skills/supabase.svg";
+import Prisma from "@/public/skills/prisma.svg";
 
 export const Skill_data = [
   {
@@ -60,8 +63,20 @@ export const Skill_data = [
     alt: "Tailwind Logo",
   },
   {
+    src: Supabase,
+    alt: "Supabase Logo",
+  },
+  {
+    src: Prisma,
+    alt: "Prisma Logo",
+  },
+  {
     src: Python,
     alt: "Python Logo",
+  },
+  {
+    src: Playwright,
+    alt: "Playwright Logo",
   },
   {
     src: Markdown,

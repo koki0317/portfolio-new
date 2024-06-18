@@ -9,6 +9,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import AboutMe from "@/components/AboutMe";
 import Contact from "@/components/Contact";
+import Projects2 from "@/components/Projects2";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -27,7 +28,7 @@ export default function Home() {
         <Hero />
         <AboutMe />
         <Skills />
-        <Projects />
+        <Projects2 />
         <Contact />
       </div>
     </main>

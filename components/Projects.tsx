@@ -14,6 +14,12 @@ import Link from "next/link";
 const Projects = () => {
   const projects = [
     {
+      src: "/project4.png",
+      alt: "Lp screenshot",
+      text: "Job platform for junior developers",
+      slug: "https://job-posts-n7n8rv1g1-kokis-projects-02b53072.vercel.app/",
+    },
+    {
       src: "/project1.png",
       alt: "The SAAS website's screenshot",
       text: "Built the SAAS website from design to functionality.",
