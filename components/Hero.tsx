@@ -46,7 +46,6 @@ const Hero = () => {
           </div>
           <motion.div variants={slideInFromRight(1.5)}>
             <Image
-              loading="lazy"
               src="/me.png"
               width={0}
               height={0}
