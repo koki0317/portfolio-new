@@ -150,7 +150,7 @@ const Projects2 = () => {
               <div className="flex flex-col lg:items-center lg:flex-row lg:justify-between gap-y-8 sm:gap-y-12 lg:gap-x-16">
                 <div
                   className={cn(
-                    "relative aspect-video w-full max-w-xl",
+                    "relative aspect-video w-full",
                     index % 2 === 0 && "lg:order-1 lg:ml-auto"
                   )}
                 >
