@@ -15,8 +15,8 @@ const Navbar = () => {
     <nav className="w-full bg-inherit h-[56px] shadow-sm fixed top-0 z-50 px-4 lg:px-6">
       <div className="h-full flex flex-row items-center justify-between max-w-[1400px] mx-auto">
         <Scroll
-          to=""
-          href=""
+          to="/"
+          href="/"
           onClick={scrollToTop}
           className="cursive font-bold text-xl lg:text-2xl text-gray-900 dark:text-gray-300"
         >
