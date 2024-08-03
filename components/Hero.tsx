@@ -1,10 +1,8 @@
 import { slideInFromLeft, slideInFromRight } from "@/utils/motion";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import Image from "next/image";
 import { Link as Scroll } from "react-scroll";
-import { Badge } from "./ui/badge";
 
 const Hero = () => {
   return (
@@ -21,10 +19,6 @@ const Hero = () => {
               className="flex flex-col text-3xl font-black text-gray-900 dark:text-gray-100 md:text-4xl lg:text-5xl"
             >
               <span className="leading-relaxed">Hello, I&apos;m Koki, </span>
-              {/* <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              {" "}
-              I&apos;m Koki{" "}
-            </span> */}
               <span className="">a Frontend Developer</span>
             </motion.h1>
             <motion.p
@@ -35,7 +29,7 @@ const Hero = () => {
             </motion.p>
             {/* <motion.a variants={slideInFromLeft(1)} className=""> */}
             <motion.div variants={slideInFromLeft(1.2)}>
-              <Scroll to="contact" smooth>
+              <Scroll to="contact" smooth href="#contact">
                 <Button variant="default" size="lg">
                   Let&apos;s talk
                 </Button>
