@@ -138,7 +138,7 @@ const Projects2 = () => {
     },
   ];
   return (
-    <section className="antialiased">
+    <section id="projects">
       <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="title-text text-center mb-5 lg:mb-8">Projects</h2>

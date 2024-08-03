@@ -27,22 +27,22 @@ const Navbar = () => {
           <div className="dark:text-gray-100 text-gray-900 text-sm">
             <ul className="hidden gap-8 items-center lg:flex">
               <li>
-                <Scroll href="" smooth to="about-me">
+                <Scroll href="#about-me" smooth to="about-me">
                   About Me
                 </Scroll>
               </li>
               <li>
-                <Scroll href="" smooth to="skills">
+                <Scroll href="#skills" smooth to="skills">
                   Skills
                 </Scroll>
               </li>
               <li>
-                <Scroll href="" smooth to="projects">
+                <Scroll href="#projects" smooth to="projects">
                   Projects
                 </Scroll>
               </li>
               <li>
-                <Scroll href="" smooth to="contact">
+                <Scroll href="#contact" smooth to="contact">
                   <Button variant="default">Contact</Button>
                 </Scroll>
               </li>
