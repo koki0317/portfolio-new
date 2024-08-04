@@ -41,8 +41,8 @@ const Hero = () => {
           <motion.div variants={slideInFromRight(1.5)}>
             <Image
               src="/me.png"
-              width={0}
-              height={0}
+              width={250}
+              height={250}
               sizes="(min-width: 840px) 250px, (min-width: 640px) calc(41.11vw - 87px), 250px"
               alt="Me"
               style={{ width: "100%", height: "auto" }}

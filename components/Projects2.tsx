@@ -159,6 +159,7 @@ const Projects2 = () => {
                     src={src}
                     alt={alt}
                     fill
+                    sizes="(min-width: 1320px) 656px, (min-width: 1040px) calc(92.31vw - 544px), calc(100vw - 32px)"
                   />
                 </div>
 
