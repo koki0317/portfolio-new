@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import { MobileSidebar } from "./MobileSidebar";
 import { ModeToggle } from "./ModeToggle";
 import { Link as Scroll, animateScroll } from "react-scroll";
+import { cedarville_cursive } from "@/app/fonts";
 
 const Navbar = () => {
   const scrollToTop = () => {
@@ -18,7 +18,8 @@ const Navbar = () => {
           to="/"
           href="/"
           onClick={scrollToTop}
-          className="cursive font-bold text-xl lg:text-2xl text-gray-900 dark:text-gray-300"
+          className={`font-bold text-xl lg:text-2xl text-gray-900 dark:text-gray-300`}
+          style={{ fontFamily: cedarville_cursive.style.fontFamily }}
         >
           Koki Takahashi
         </Scroll>

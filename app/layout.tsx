@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import StarsCanvas from "@/components/StarBackground";
 import Navbar from "@/components/Navbar";
-import { Poppins } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
-
-const inter = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
+import { poppins } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Koki Takahashi",
@@ -22,12 +15,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // const client = useClient()
-  // const { themes } = useTheme();
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} dark:bg-[#030014] overflow-y-scroll overflow-x-hidden`}
+        className={`${poppins.className} dark:bg-[#030014] overflow-y-scroll overflow-x-hidden`}
       >
         <ThemeProvider
           attribute="class"
