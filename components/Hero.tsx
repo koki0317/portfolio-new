@@ -43,7 +43,7 @@ const Hero = () => {
               src="/me.png"
               width={0}
               height={0}
-              sizes="100vw"
+              sizes="(min-width: 840px) 250px, (min-width: 640px) calc(41.11vw - 87px), 250px"
               alt="Me"
               style={{ width: "100%", height: "auto" }}
               className="max-w-[250px] mx-auto mt-14 sm:mt-0"
