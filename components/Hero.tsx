@@ -47,6 +47,7 @@ const Hero = () => {
               alt="Me"
               style={{ width: "100%", height: "auto" }}
               className="max-w-[250px] mx-auto mt-14 sm:mt-0"
+              priority
             />
           </motion.div>
         </div>
